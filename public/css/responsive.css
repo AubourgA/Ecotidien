@@ -1,0 +1,104 @@
+/******************************
+ RESPONSIVE QUERY
+ ****************************/
+
+                 /**********************/
+                  /*** MODE TABLETTE ***/
+                /**********************/
+
+
+@media  screen and (max-width: 1023px){
+    
+#home_nonconnect {
+    overflow-x: hidden;
+}
+
+/* #home_nonconnect h1 {
+    font-size: 4rem;
+    
+} */
+
+#home_nonconnect header {
+    height:140vh;
+    background-position:70%;
+  
+}
+
+footer ul li {
+    font-size: 1.2rem;
+}
+
+
+}
+
+
+                  /**********************/
+                  /*** MODE SMARTPHONE ***/
+                /**********************/
+
+@media  screen and (max-width: 767px){
+    
+    /* #home_nonconnect h1 {
+        font-size: 3rem;
+      
+    } */
+
+
+    #home_nonconnect header nav {
+      padding:0;
+    }
+
+    #home_nonconnect header  ul {
+        justify-content: none;
+      }
+
+    #home_nonconnect header .home-logo {
+        width:20%;
+    }
+
+    #home_nonconnect header nav li{
+        /* font-size: 1rem; */
+        padding:2px;
+    }
+
+    #home_nonconnect header nav li:first-child {
+        margin-right: -7rem;
+    }
+    #home_nonconnect header .nav-link {
+        margin-left:-5rem;
+    }
+
+
+    #home_nonconnect header {
+        height:120vh;
+        background-position:85%;
+      
+    }
+
+    
+    #home_nonconnect header .bloc-membre {
+        padding-left: 1.5rem;
+        color: white;
+    }
+    #home_nonconnect header .bloc-membre > p {
+        padding:1rem 0;
+    }
+    #home_nonconnect header .bloc-membre img {
+        width:20px;
+    
+    }
+    #home_nonconnect header .bloc-profil img:nth-child(2),
+    #home_nonconnect header .bloc-profil img:nth-child(3)
+    {
+        margin-left: -45px;
+    }
+    .btn_large {
+        margin-bottom: 25rem;
+        
+    }
+
+    .p_text:not(:nth-child(2)) {
+        color: white;
+    }
+
+}

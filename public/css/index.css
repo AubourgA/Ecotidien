@@ -45,17 +45,17 @@ body {
     
 }
 
-/* GLOBAL*/
+/****************** GLOBAL***************************/
 
 h1 {
-    font-size: 7rem;
+    font-size: clamp(3.5rem, 5vw, 7rem);
     font-weight: 200;
     padding:3rem 0;
 }
 
 h2 {
     font-weight: 300;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 4vw, 4rem);
     line-height: 6rem;
     text-align: center;
     margin: 7rem 0;
@@ -63,13 +63,13 @@ h2 {
 
 h3 {
     font-weight: 600;
-    font-size: 2.1rem;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
     line-height: 1.7rem;
     padding:1.5rem;
 }
 
 h4 {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
     margin-bottom:1.5rem;
 }
 
@@ -84,8 +84,7 @@ a {
     position:fixed;
     top:0;
     width:100vw;
-    height:100vh;
-   
+    height:100vh;  
 }
 
 .modal-container .overlay {
@@ -93,11 +92,7 @@ a {
     width:100%;
     height:100%;
     background: #333333d3;
-   
 }
-
-
-
 
 .modal-container .modal {
     width:95%;
@@ -113,6 +108,7 @@ a {
     transform: translate(-50%, -50%);
     font-family: "Raleway", sans-serif;
     animation: anim 0.4s ease-out;
+    z-index:100;
 }
 
 
@@ -157,25 +153,32 @@ a {
 }
 
 .nav-link {
-    border:2px solid var(--color-font-general);
-    border-radius: 20px;
+    border:1px solid var(--color-font-general);
+    border-radius: 2rem;
     color:var(--color-font-general);
     font-weight: 600;
     padding:8px 7px;
 }
 
+
+
 .d-flex {
     display:flex;
     align-items: center;
+  
 }
 
 .d-flex-justify-center{
     justify-content: center;
 }
 
+.d-flex-justify-between {
+    justify-content: space-between;
+}
+
 .p_text {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
     line-height: 2.5rem;
 }
 
@@ -194,7 +197,7 @@ a {
 .btn_large a {
     color: var(--color-font-white);
     font-weight: 600;
-    font-size: 2.1rem;
+    font-size: clamp(1.2rem, 2vw, 2.1rem);
  }
 
 /* page principal =  home_nonconnect */
@@ -206,20 +209,27 @@ a {
     width:100%;
     background-image: url("/images/HOME_NON_CONNECTEE/BG_HOME_HEADER.png");
     background-size: cover;
+    background-position: center;
 }
 
 
 #home_nonconnect header nav {
-    width:100%;
-    padding:30px 20px;
+   
+    padding:30px 5px;
 }
 
 #home_nonconnect header  ul {
     display:flex;
     justify-content: space-between;
     list-style: none;
+    align-items: center;
+    
 }
 
+#home_nonconnect header  ul li {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    min-width: 50px;
+}
 #home_nonconnect header .home-logo {
     width:35%;
 }
@@ -228,8 +238,13 @@ a {
 #home_nonconnect header li:nth-child(2) {
    display:flex;
    justify-content: center;
+  
 }
 
+#home_nonconnect .nav-link_mobile {
+    display:none;
+    
+}
 
 #home_nonconnect .bloc-content {
     margin:25px 0;
@@ -275,11 +290,12 @@ a {
 #home_nonconnect header .bloc-profil img:nth-child(2),
 #home_nonconnect header .bloc-profil img:nth-child(3)
  {
-    margin-left: -20px;
+    margin-left: -40px;
 }
 
 #home_nonconnect header .bloc-membre {
     padding-left: 1.5rem;
+    font-size: clamp(1rem, 2.2vw, 2.2rem);
 }
 
 #home_nonconnect header .bloc-membre > p {
@@ -290,9 +306,7 @@ a {
     display:flex;
     align-items: center;
 }
-#home_nonconnect header .bloc-membre img {
-    width:20px;
-}
+
 
 /** section bloc-objectif **/
 
@@ -329,8 +343,6 @@ a {
 /* section bloc-comments*/
 
 
-
-
 #home_nonconnect .bloc-comments .comment-img {
     min-width: 5rem;
     width:20rem;
@@ -342,11 +354,12 @@ a {
 
 #home_nonconnect .bloc-comments .bloc-content {
     font-style: italic;
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
 #home_nonconnect .bloc-comments .bloc-info {
     font-weight: 700;
+    font-size: clamp(1rem, 2.1vw, 1.8rem);
 }
 
 
@@ -381,6 +394,7 @@ a {
 
 #home_nonconnect .bloc-comments .comment-content {
     padding:0 4rem;
+   
 }
 
 
@@ -446,6 +460,7 @@ footer .bloc-logo-footer p {
 
 footer .bloc-right {
     margin-top:7rem;
+    min-width: 150px;
 }
 
 footer ul {
@@ -479,15 +494,11 @@ footer form span {
     display:block;
 }
 
-.block_search button,
-footer button {
-    color: var(--color-font-white);
-    background: var(--color-bg-btn);
-    border-radius: 50px ;
-    border: 2px solid var(--color-font-white);
-    margin-left: -80px;
-    padding: 5px 10px;
-    cursor:pointer;
+
+.group-form {
+    position:relative; 
+    width:60%;
+    min-width: 150px;
 }
 
 .block_search input,
@@ -496,9 +507,30 @@ footer input {
     border: 1px solid var(--color-font-white);
     border-radius: 50px;
     padding: 8px 0 8px 15px;
-    min-width:250px;
-    width: 50%;
+    min-width:150px;
+    width:100%;
+  
 }
+
+.block_search button,
+footer button {
+    color: var(--color-font-white);
+    background: var(--color-bg-btn);
+    border-radius: 50px ;
+    border: 2px solid var(--color-font-white);
+   /* margin-left: -80px;*/
+    padding: 5px 10px;
+    cursor:pointer;
+}
+.block_search button,
+footer button {
+    position:absolute; 
+    top:50%;
+    right:0%;
+    transform:translateY(-50%);
+    
+}
+
 /*******************/
 /* PAGE CONNEXION */
 /******************/
@@ -1057,4 +1089,67 @@ display:none;
     border:1px solid #5f00ce;
 }
 
-/* RESPONSIVE QUERY */
+
+
+/* ABOUT PAGE*/
+#about {
+    height:100vh;
+    background-image: url("../images/connexion.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about header nav ul {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding:1rem;
+}
+
+#about h1 {
+    text-align: center;
+    font-size:4rem;
+    font-family: "Raleway";
+    font-style: italic;
+    word-spacing: 0.5rem;
+}
+
+#about h2 {
+    margin:25px 0 20px 0;
+    
+}
+
+#about h3 {
+    margin:0;
+    padding:1rem 0;
+}
+
+#about p {
+    margin-bottom :1rem;
+}
+#about main {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#about main ul {
+    list-style: none;
+}
+
+#about main .box-team-wrapper {
+    display:flex;
+    padding:0 10px;
+}
+
+#about section li {
+    font-weight:400;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#about .team .block {
+    padding:0 0.5rem;
+}
+
+
