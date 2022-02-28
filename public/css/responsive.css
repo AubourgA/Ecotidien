@@ -13,10 +13,6 @@
             overflow-x: hidden;
         }
 
-        /* #home_nonconnect h1 {
-            font-size: 4rem;
-            
-        } */
 
         #home_nonconnect header {
             height:140vh;
@@ -36,6 +32,26 @@
             background-position: bottom;
             height: 150%;
         }
+
+       
+        #user_home .btn_box {
+            width: calc(100% - 3vw);
+            text-align: center;
+            margin-top: -2.5rem;
+            margin:0 auto;
+        }
+        #user_home .btn_valid {
+   
+            color: var(--color-bg-comment);
+            padding: 0.8rem 1.5rem;
+          
+           
+            margin-bottom: 50px;
+            
+           
+            
+        }
+   
 
 }
 
@@ -133,6 +149,21 @@
 
     #quiz_wrap #quiz {
         background-position: center;
+    }
+
+         /* USER_HOME */
+    /* #user_home .header-content article:nth-child(4) {
+        flex-direction: column;
+        margin-top:5rem;
+    } */
+
+    #user_home .card_challenge {
+        flex-direction: column;
+    }
+
+    #user_home .main-container .card_wrap {
+        min-width: 90%;
+        
     }
 
 }

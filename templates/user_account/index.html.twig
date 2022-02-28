@@ -223,10 +223,11 @@
                             <p>Laissez vous guider et intégrez <br> pas à pas une routine écolo à <br> votre foyer.</p>
                     </article>
                      <form class="bloc-subscribe">
-                            <label for="email">Inscrivez-vous à notre<span> newsletter<span></label>
-                            
+                        <label for="email">Inscrivez-vous à notre<span> newsletter<span></label>
+                        <div class="group-form">  
                             <input id="email" type="email" placeholder="Email">
                             <button>s'inscrire</button>
+                        </div>
                     </form>
                 
                 </div>
@@ -262,3 +263,7 @@
 
 
 {% endblock %}
+  {% block javascripts %}
+            <script type="text/javascript" src="/JS/index.js"></script>
+          
+ {% endblock %}

@@ -18,7 +18,9 @@ const modalTriggers = document.querySelector(".modal-trigger");
 function closeModal() {
   modalContainer.classList.add("disactive");
 }
+if(modalTriggers) {
 
-modalTriggers.addEventListener('click', closeModal);
+  modalTriggers.addEventListener('click', closeModal);
+}
 
 

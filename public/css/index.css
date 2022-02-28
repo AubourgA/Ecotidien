@@ -495,10 +495,11 @@ footer form span {
 }
 
 
-.group-form {
+.group-form, 
+.block_search {
     position:relative; 
     width:60%;
-    min-width: 150px;
+    min-width: 200px;
 }
 
 .block_search input,
@@ -514,6 +515,10 @@ footer input {
 
 .block_search button,
 footer button {
+    position:absolute; 
+    top:50%;
+    right:0%;
+    transform:translateY(-50%);
     color: var(--color-font-white);
     background: var(--color-bg-btn);
     border-radius: 50px ;
@@ -521,14 +526,6 @@ footer button {
    /* margin-left: -80px;*/
     padding: 5px 10px;
     cursor:pointer;
-}
-.block_search button,
-footer button {
-    position:absolute; 
-    top:50%;
-    right:0%;
-    transform:translateY(-50%);
-    
 }
 
 /*******************/
@@ -665,7 +662,7 @@ footer button {
     align-self: center;
 }
 
-#user_home ul li:nth-child(2) {
+#user_home nav ul li:nth-child(2) {
     display:flex;
     justify-content: center;
 }
@@ -706,7 +703,6 @@ line-height: 3.3rem;
 display: flex;
 align-items: center;
 letter-spacing: 0.04em;
-
 padding:0;
 }
 
@@ -853,13 +849,21 @@ padding:0;
 #user_home .btn_valid {
    
     color: var(--color-bg-comment);
-    padding: 1.6rem 3rem;
+    padding: 0.5rem 3rem;
     background: var(--color-font-picto);
     border-radius: 25px;
-    margin-bottom: 60px;
+    border:1px solid transparent;
+    margin-bottom: 6rem;
     font-style: normal;
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    transition:0.3s ease-out;
+}
+
+#user_home .btn_valid:hover{
+    color:var(--color-font-picto);
+    background: var(--color-bg-comment);
+    border:1px solid var(--color-font-picto);
 }
 
 #user_home .card_astuce {
